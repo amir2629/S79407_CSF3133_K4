@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Course Feedback</title>
+</head>
+
+<!--Error 1 (Line 24): stray end tag-->
+<!--Error 2 (Line 42 ): no need for colspan   -->
+<!--Error 3 (Line 65 ): suppose /form, not /from-->
+<!--Error 4 (Line 24 ): suppose </header>, not </head>-->
+<!--Error 5 (Line 68 ): missing semicolon-->
+<!--Error 6 (Line 55 ): name to fullname id-->
+<!--Error 7 (Line 63 ): labs to lab id-->
+
+
+
+
+
+
+<body>
+    <nav>
+    <a href="#comments">Student Comments</a> 
+</nav>
+<header>
+<h1>CSF3133 Course Feedback</h1>
+</header>
+<nav>
+<a href="#results">Results</a> | <a href="#form">Feedback Form</a>
+</nav>
+<section id="results">
+<h2>Feedback Summary</h2>
+<table border="1">
+<tr>
+<th>Week</th>
+<th>Topic</th>
+<td>Rating</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Introduction to HTML</td>
+<td>4.5</td>
+<tr>
+<td>2</td>
+<td>Tables and Forms</td>
+<td>4.0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Semantic HTML</td>
+<td>4.0</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td rowspan="2">Mini Project</td>
+    <td>4.2</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>4.8</td>
+</tr>
+<tr>
+    <td colspan="2">Average Rating</td>
+    <td>4.3</td>
+</table>
+</section>
+<section id="form">
+<h2>Give Your Feedback</h2>
+<form action="submit_feedback.php" method="post">
+<label for="fullname">Name:</label>
+<input type="text" id="fullname" name="name"><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required><br><br>
+<label>Overall rating:</label><br>
+<input type="radio" id="good" name="good" value="good">
+<label for="good">Good</label>
+<input type="radio" id="poor" name="poor" value="poor">
+<label for="poor">Poor</label><br>
+<input type="radio" id="average" name="average" value="average">
+<label for="average">Average</label><br>
+<input type="checkbox" id="lab" name="lab" value="yes">
+<label for="lab">I attended all labs</label><br><br>
+
+    <p>Topics I want more practice on</p>br>
+        <input type="checkbox" name="topics" value="Bio">Biology<br>
+        <input type="checkbox" name="topics" value="Chemist">Chemistry<br>
+        <input type="checkbox" name="topics" value="Physics">Physics<br>
+<input type="submit" value="Submit">
+</form>
+</section>
+
+<section id="comments">
+    <h2>Student Comments</h2>
+    <h3>Ali Bistro</h3>
+    <p>This course has been incredibly informative and engaging!</p>
+
+    <article>
+        <h3>Alan Runner</h3>
+        <p>This course has been a great learning experience!</p>
+    </article>
+</section>
+
+<footer>
+<p>Copyright &copy; 2026 CSF3133</p>
+</footer>
+</body>
+</html>
