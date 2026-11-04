@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--Title-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Bakery</title>
+</head>
+<body>
+
+    <div id="header">
+        <header><!--Header content-->
+        <h1>Amir Bakery</h1>
+        <span>Delicious Baked Goods Since 1990</span> <!--slogan-->
+        </header>
+    </div>
+
+    <div id="nav">
+        <nav>
+            <a href="#about">About</a> | <a href="#menu">Menu</a> | <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <div id="content">
+        <h2>About Us</h2>
+        <p>Welcome to <em>Amir Bakery</em>. We hope you enjoy our delicious baked goods!    
+        We got a wide variety of <strong>bread</strong>, <strong>pastries</strong>, and <strong>cakes</strong> to satisfy your taste buds.
+        Our bakery are coloured with a vibrant colour scheme such as <span style="color: #ff6b6b;">red</span> and <span style="color: #4ecdc4;">teal</span></p>
+            
+        <!--Order Form-->
+        <h2>Order Form</h2> 
+        <form action="submit_order.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phoneNum">Phone Number:</label>
+            <input type="tel" id="phoneNum" name="phoneNum" required><br><br>
+
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" required><br><br>
+
+            <label for="pickupTime">Pickup Time:</label>
+            <input type="time" id="pickupTime" name="pickupTime" required><br><br>
+
+            <label for="flavour">Flavour:</label>
+            <input list="flavours" id="flavour" name="flavour">
+            <datalist id="flavours">
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="strawberry">Strawberry</option>
+            </datalist><br><br>
+
+            <label for="icingColour">Icing Colour:</label>
+            <input type="color" id="icingColour" name="icingColour"><br><br>
+
+            <label for="sweetness">Sweetness Level:</label>
+            <input type="range" id="sweetness" name="sweetness" min="1" max="5"><br><br>
+
+            <!--Price Calculator -->
+            <h3>Price Calculator</h3>
+            <p>Enter the quantity of each item you'd like to order:</p>
+                <label for="cupcake-qty">Cupcakes (RM 3.00):</label><br>
+                <input type="number" id="cupcake-qty" name="cupcake-qty" min="0" value="0"><br><br>
+
+                <label for="slices-qty">Cake Slices (RM 5.00):</label><br>
+                <input type="number" id="slices-qty" name="slices-qty" min="0" value="0"><br><br>
+
+            <!--Output-->
+                <p><strong>Total Price: RM <output name="totalprice" for="cupcake-qty slices-qty"></output></strong></p>
+
+                <input type="submit" value="Place Order">
+            </form>
+        </div>
+
+
+    <div id="sidebar">
+        <h2>Price List</h2>
+
+        <p>Orders &gt; &pound; &nbsp;10.00: Free delivery</p>
+        <ul>
+            <li>Bread: &pound; &nbsp;2.99</li>
+            <li>Cupcake: &pound; &nbsp;3.00</li>
+            <li>Cake: &pound; &nbsp;5.00</li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <footer>
+            <p>&copy; 2024 Amir Bakery. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
