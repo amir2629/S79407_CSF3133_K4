@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    <!-- Link external stylesheet -->
+    <link rel="stylesheet" href="cafe.css">
+    <style>
+        /* Internal CSS rule for heading text decoration */
+        h1 { text-decoration: overline; }
+    </style>
+</head>
+<body>
+
+    <!-- 
+      ERROR FIX LOG (Line Numbers & Corrections):
+      1. (Line 6): Removed unnecessary type attribute from <style>.
+      2. (Line 9): Changed list-style-type: no; to list-style-type: none;.
+      3. (Line 13-16): Fixed link state ordering (link -> visited -> hover -> active).
+      4. (Line 17): Corrected text-decoration: overlined; to overline;.
+      5. (Line 18): Fixed missing colon in color: #333333;.
+      6. (Line 19): Added missing closing curly brace for #intro rule.
+      7. (Line 23): Removed raw <highlight> tag syntax error from CSS block.
+      8. (Line 43): Fixed navigation href="#menu" (added missing # symbol).
+      9. (Line 56): Changed class="intro" to id="intro" to match the CSS selector.
+      10. (Line 60, 64): Replaced duplicate id="item" with class="item".
+      11. (Line 70): Added controls attribute to the <video> tag.
+      12. (Line 68): Corrected source type attribute from type="mp4" to type="video/mp4".
+    -->
+
+    <header>
+        <h1>e-Café Campus</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Today's Menu</h2>
+        <p id="intro">Freshly brewed coffee and local delights every day.</p>
+        
+        <article class="item">
+            <h3>Kopi Tarik</h3>
+            <p>Only <span class="old-price">RM 4.50</span> <span class="highlight">RM 3.50</span></p>
+        </article>
+        
+        <article class="item">
+            <h3>Nasi Lemak</h3>
+            <p>Only <span class="old-price">RM 6.50</span> <span class="highlight">RM 5.00</span></p>
+        </article>
+    </section>
+
+    <!-- Video Section with Responsive Figure and Figcaption -->
+    <section id="video">
+        <h2>Watch Our Story</h2>
+        <figure>
+            <video width="400" height="300" controls>
+                <source src="cafe.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption>A quick look behind the scenes at e-Café Campus.</figcaption>
+        </figure>
+    </section>
+
+    <!-- Feedback Section with Form -->
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form class="feedback-form" action="feedback.php" method="POST">
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br><br>
+
+            <label for="femail">E-mail:</label><br>
+            <input type="email" id="femail" name="femail" required><br><br>
+
+            <label>Visit Type:</label><br>
+            <input type="radio" id="dinein" name="visit" value="Dine-in" checked>
+            <label for="dinein">Dine-in</label>
+            <input type="radio" id="takeaway" name="visit" value="Take-away">
+            <label for="takeaway">Take-away</label><br><br>
+
+            <label>Favourite Items:</label><br>
+            <input type="checkbox" id="item1" name="fav" value="Kopi Tarik">
+            <label for="item1">Kopi Tarik</label><br>
+            <input type="checkbox" id="item2" name="fav" value="Nasi Lemak">
+            <label for="item2">Nasi Lemak</label><br>
+            <input type="checkbox" id="item3" name="fav" value="Roti Bakar">
+            <label for="item3">Roti Bakar</label><br><br>
+
+            <input type="submit" value="Submit Feedback">
+        </form>
+    </section>
+
+    <!-- Footer Section with Address and Mailto Link -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>
+            Contact us: <a href="mailto:support@ecafe.edu.my">support@ecafe.edu.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* General Layout & Responsive Design */
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+}
+
+/* Navigation Bar Styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+/* Interactive Link States (Correct order: link -> visited -> hover -> active) */
+a:link {
+    color: #1A5276;
+}
+
+a:visited {
+    color: #7D3C98;
+}
+
+a:hover {
+    background-color: #E67E22;
+    color: #ffffff;
+}
+
+a:active {
+    color: #C0392B;
+}
+
+/* Typography & Price Decorations */
+h2 {
+    text-decoration: underline;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #C0392B;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+#intro {
+    font-size: 18px;
+    background-color: #FDEBD0;
+    padding: 10px;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+    background-color: #fcf3cf;
+    padding: 20px;
+    border: 1px solid #f39c12;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Responsive Video Sizing */
+video {
+    max-width: 100%;
+    height: auto;
+}
